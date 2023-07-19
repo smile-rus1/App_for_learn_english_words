@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>294</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Главное окно</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(252, 252, 189);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>601</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(149, 190, 255);</string>
+    </property>
+    <property name="text">
+     <string>Приложение для изучения английских слов</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_open_learn_words">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>70</y>
+      <width>451</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(153, 153, 153);
+    border: none;
+    color: #0000;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;;
+}
+
+QPushButton:pressed {
+     background-color: rgb(0, 170, 0);
+    padding-left: 14px;
+    padding-top: 10px;
+}
+
+QPushButton:focus {
+    outline: none;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Учить слова</string>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_open_translate_words">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>140</y>
+      <width>451</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(153, 153, 153);
+    border: none;
+    color: #0000;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;;
+}
+
+QPushButton:pressed {
+     background-color: rgb(0, 170, 0);
+    padding-left: 14px;
+    padding-top: 10px;
+}
+
+QPushButton:focus {
+    outline: none;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Перевод слов</string>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_open_currect_words">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>210</y>
+      <width>451</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: rgb(153, 153, 153);
+    border: none;
+    color: #0000;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;;
+}
+
+QPushButton:pressed {
+     background-color: rgb(0, 170, 0);
+    padding-left: 14px;
+    padding-top: 10px;
+}
+
+QPushButton:focus {
+    outline: none;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Правильность написания</string>
+    </property>
+    <property name="autoRepeatInterval">
+     <number>100</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>650</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_app">
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(165, 165, 165);</string>
+    </property>
+    <property name="title">
+     <string>Информация</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(182, 182, 182);</string>
+     </property>
+     <property name="title">
+      <string>О приложении</string>
+     </property>
+     <addaction name="for_learn_words"/>
+     <addaction name="for_translate_words"/>
+     <addaction name="for_correct_words"/>
+     <addaction name="separator"/>
+     <addaction name="info_about_add_delete"/>
+    </widget>
+    <addaction name="menu"/>
+    <addaction name="for_creator_app"/>
+   </widget>
+   <widget class="QMenu" name="menu_words">
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(182, 182, 182);</string>
+    </property>
+    <property name="title">
+     <string>Слова</string>
+    </property>
+    <addaction name="action_words"/>
+   </widget>
+   <addaction name="menu_app"/>
+   <addaction name="menu_words"/>
+  </widget>
+  <action name="for_creator_app">
+   <property name="text">
+    <string>О создателе</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="for_learn_words">
+   <property name="text">
+    <string>Вкладка &quot;учить слова&quot;</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+     <kerning>true</kerning>
+    </font>
+   </property>
+  </action>
+  <action name="for_translate_words">
+   <property name="text">
+    <string>Вкладка &quot;перевод слов&quot;</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="for_correct_words">
+   <property name="text">
+    <string>Вкладка &quot;правильность написания&quot;</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="action_words">
+   <property name="text">
+    <string>Добавить/Удалить</string>
+   </property>
+  </action>
+  <action name="action_delete_words">
+   <property name="text">
+    <string>Удалить слова</string>
+   </property>
+  </action>
+  <action name="info_about_add_delete">
+   <property name="text">
+    <string>Вкладка добавить/удалить слова</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
