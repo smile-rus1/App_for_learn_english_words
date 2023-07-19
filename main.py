@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from data_base.create_db import create_db
 
 from modules_actions.about_app.about_learn_words import message_about_learn_words
+from modules_actions.about_app.about_right_wrote_words import message_about_correct_wrote_words
 from modules_actions.about_app.about_translate_words import message_about_translate_words
 from modules_actions.about_creator.about_creator_app import message_about_creator_app
 from modules_actions.about_words.about_add_delete_words import message_about_add_delete_words
@@ -28,7 +29,7 @@ class MainWindow(QMainWindow):
 
         self.main_ui.for_learn_words.triggered.connect(lambda: message_about_learn_words())
         self.main_ui.for_translate_words.triggered.connect(lambda: message_about_translate_words())
-        self.main_ui.for_correct_words.triggered.connect(lambda: ...)
+        self.main_ui.for_correct_words.triggered.connect(lambda: message_about_correct_wrote_words())
         self.main_ui.info_about_add_delete.triggered.connect(lambda: message_about_add_delete_words())
 
         self.main_ui.for_creator_app.triggered.connect(lambda: message_about_creator_app())
