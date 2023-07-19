@@ -31,13 +31,8 @@ class WindowCorrectWrite(QMainWindow):
         self.correct_ui.btn_skip_word.clicked.connect(self.skip_word)
 
     def on_start(self):
-        if self.correct_ui.radio_basic.isChecked():
-            self.change_text_in_btn()
-            self.check_state()
-
-        if self.correct_ui.radio_on_total.isChecked():
-            self.change_text_in_btn()
-            self.check_state()
+        self.change_text_in_btn()
+        self.check_state()
 
     def change_text_in_btn(self):
         if self.correct_ui.btn_start_end.text() == "Начать":
