@@ -129,6 +129,7 @@ class WindowCorrectWrite(QMainWindow):
             self.correct_ui.edit_to_out.setText(self.translate)
         else:
             self.change_text_in_btn()
+            self.check_state()
 
     def skip_word(self):
         if self.correct_ui.radio_basic.isChecked():
