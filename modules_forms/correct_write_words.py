@@ -44,8 +44,6 @@ class WindowCorrectWrite(QMainWindow):
             if self.correct_ui.radio_on_total.isChecked():
                 self.get_quantity_translate_words()
                 self.output_quantity_words()
-                print(self.list_of_words)
-
         elif self.correct_ui.btn_start_end.text() == "Остановить":
             self.correct_ui.btn_start_end.setText("Начать")
 
@@ -76,9 +74,8 @@ class WindowCorrectWrite(QMainWindow):
             self.count_total = 0
 
     def get_one_translate(self):
-        if self.correct_ui.radio_basic.isChecked():
-            gen = CorrectRepository().get_translate_word()
-            self.translate = next(gen)[0]
+        gen = CorrectRepository().get_translate_word()
+        self.translate = next(gen)[0]
 
     def get_word(self):
         gen = CorrectRepository().output_word(self.translate)
@@ -90,6 +87,9 @@ class WindowCorrectWrite(QMainWindow):
             self.count_right_answer += 1
 
         self.correct_ui.edit_to_input.setText("")
+
+        if self.correct_ui.radio_basic.isChecked():
+            self.simple_mode()
 
         if self.correct_ui.radio_on_total.isChecked():
             self.output_quantity_words()
@@ -118,7 +118,7 @@ class WindowCorrectWrite(QMainWindow):
                 self.count_total = quantity_words
 
         except ValueError:
-            negative_handler("Количество слов не может быть меньше 0!")
+            negative_handler("Количество слов не может быть меньше или равно 0!")
 
         except:
             negative_handler("Произошла ошибка, возможно вы не правильно ввели данные!")
@@ -129,7 +129,6 @@ class WindowCorrectWrite(QMainWindow):
             self.correct_ui.edit_to_out.setText(self.translate)
         else:
             self.change_text_in_btn()
-            self.check_state()
 
     def skip_word(self):
         if self.correct_ui.radio_basic.isChecked():
